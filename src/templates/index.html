@@ -38,10 +38,20 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+
+
 
   </head>
 
   <body>
+    <script type="text/javascript">
+      VK.init({
+        apiId: 7811259,
+        onlyWidgets: true
+      });
+    </script>
+
     <!-- ======= Mobile nav toggle button ======= -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -699,6 +709,7 @@
                 </div>
               </form>
             </div> -->
+            {%block questions%} {%endblock%}
           </div>
         </div>
       </section>
