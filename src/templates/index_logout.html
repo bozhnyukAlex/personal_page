@@ -2,11 +2,4 @@
 {% block login %}
 <li><a href="{{url_for('logout')}}"><i class="bx bxl-vk"></i> <span>VK logout</span></a></li>
 {% endblock %}
-{% block questions %}
-<div class="col-lg-8 mt-5 mt-lg-0">
-    <div id="vk_comments"></div>
-    <script type="text/javascript">
-        VK.Widgets.Comments('vk_comments');
-    </script>
-</div>
-{% endblock %}
+
