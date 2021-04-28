@@ -66,7 +66,7 @@ def vk_login():
     if not user_code:
         return redirect(url_for('index_page'))
 
-    response = requests.get("https://oauth.vk.com/access_token?client_id=7811259&client_secret=R5KWO3NYTbNgCXu2Pwzf&redirect_uri=http://127.0.0.1:5000/vk_login&code=" + user_code)
+    response = requests.get("https://oauth.vk.com/access_token?client_id=7811259&client_secret=R5KWO3NYTbNgCXu2Pwzf&redirect_uri=http://178.154.213.152/vk_login&code=" + user_code)
     access_token_json = json.loads(response.text)
     if "error" in access_token_json:
         return redirect(url_for('index_page'))
