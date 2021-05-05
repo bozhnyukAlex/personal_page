@@ -107,6 +107,7 @@
                 ><i class="bx bx-envelope"></i> <span>Contacts</span></a
               >
             </li>
+            <li><a href="#comments"><i class="bx bx-chat-dots"></i> <span>Comments</span></a></li>
             {%block login%} {%endblock%}
           </ul>
         </nav>
@@ -715,6 +716,14 @@
         </div>
       </section>
       <!-- End Contact Section -->
+      <section id="comments" class="comments">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Comments</h2>
+          </div>
+          {%block questions%} {%endblock%}
+        </div>
+      </section>
     </main>
     <!-- End #main -->
 
