@@ -1,47 +1,4 @@
 {% extends "index.html" %}
-{% block modal %}
-<!-- Trigger/Open The Modal -->
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Modal Header</h2>
-    </div>
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-    </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
-  </div>
-</div>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("logout-vk");
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-{%endblock%}
-{% block login %}
-<li><a id="logout-vk" href="#exitModal" ><i class="bx bxl-vk"></i> <span>VK logout</span></a></li>
-<!--href="{{url_for('logout')}}"-->
-{% endblock %}
 {% block questions %}
 <div class="col-lg-8 mt-5 mt-lg-0">
     <div id="vk_comments"></div>
@@ -49,4 +6,8 @@ window.onclick = function(event) {
         VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
     </script>
 </div>
+<button id="vk-logout"
+        type="submit"
+        onclick="location.href='{{url_for(\'logout\')}}'">Log out from VK</button>
+
 {% endblock %}
