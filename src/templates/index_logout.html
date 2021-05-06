@@ -22,6 +22,16 @@
       </div>
     </div>
   </div>
+{%endblock%}
+{% block questions %}
+<div class="col-lg-8 mt-5 mt-lg-0">
+    <div id="vk_comments"></div>
+    <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+    </script>
+</div>
+<button id="logout-vk"
+        type="submit">Log out from VK</button>
 <script>
     // Get the modal
 var modal = document.getElementById("exampleModal");
@@ -39,14 +49,4 @@ window.onclick = function(event) {
   }
 }
 </script>
-{%endblock%}
-{% block questions %}
-<div class="col-lg-8 mt-5 mt-lg-0">
-    <div id="vk_comments"></div>
-    <script type="text/javascript">
-        VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
-    </script>
-</div>
-<button id="logout-vk"
-        type="submit">Log out from VK</button>
 {% endblock %}
