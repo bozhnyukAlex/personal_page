@@ -40,11 +40,6 @@
 
     <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
 
-    <script>
-      function ConfirmLogout(){
-		$('#exitModal').modal();
-	  }
-    </script>
 
 
   </head>
@@ -55,7 +50,7 @@
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <!--<div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Confirmation of exit</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -70,9 +65,16 @@
               <button type="submit" class="btn btn-primary">Logout</button>
             </form>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
+
+    <script>
+      function ConfirmLogout(){
+		$('#exitModal').modal();
+	  }
+    </script>
+
 
     <script type="text/javascript">
       VK.init({apiId: 7840867, onlyWidgets: true});
