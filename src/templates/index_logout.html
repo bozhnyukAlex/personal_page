@@ -1,10 +1,8 @@
 {% extends "index.html" %}
-{%block modal%}
+{% block modal %}
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
 <!-- The Modal -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
@@ -19,14 +17,13 @@
       <h3>Modal Footer</h3>
     </div>
   </div>
-
 </div>
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("logout-vk");
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
@@ -42,7 +39,8 @@ window.onclick = function(event) {
 </script>
 {%endblock%}
 {% block login %}
-<li><a href="{{url_for('logout')}}"><i class="bx bxl-vk"></i> <span>VK logout</span></a></li>
+<li><a id="logout-vk" ><i class="bx bxl-vk"></i> <span>VK logout</span></a></li>
+<!--href="{{url_for('logout')}}"-->
 {% endblock %}
 {% block questions %}
 <div class="col-lg-8 mt-5 mt-lg-0">
