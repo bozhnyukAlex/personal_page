@@ -31,23 +31,7 @@
     </script>
 </div>
 <button id="logout-vk"
-        type="submit">Log out from VK</button>
-<script>
-    // Get the modal
-var modal = document.getElementById("exampleModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("logout-vk");
-
-btn.onclick = function() {
-    console.log("pressed");
-    modal.style.display = "block";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+        type="submit"
+        data-toggle="modal"
+        data-target="#exampleModal">Log out from VK</button>
 {% endblock %}
