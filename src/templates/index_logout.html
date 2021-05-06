@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{% block login %}
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -21,7 +20,8 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
+{% block login %}
 <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><i class="bx bxl-vk"></i> <span>VK
             logout</span></a></li>
 {% endblock %}
