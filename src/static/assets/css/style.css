@@ -1101,7 +1101,7 @@ section {
   opacity: 0.8;
 }
 
-#vk-logout {
+#logout-vk {
   border-radius: 25px;
   background-color: #632700;
   color: white;
@@ -1112,7 +1112,7 @@ section {
   width: 100%;
 }
 
-#vk-logout:hover {
+#logout-vk:hover {
   opacity: 0.8;
 }
 
