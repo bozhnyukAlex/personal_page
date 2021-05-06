@@ -38,9 +38,8 @@ window.onclick = function(event) {
 }
 </script>
 {%endblock%}
+
 {% block login %}
-<li><a id="logout-vk" href="#exitModal" ><i class="bx bxl-vk"></i> <span>VK logout</span></a></li>
-<!--href="{{url_for('logout')}}"-->
 {% endblock %}
 {% block questions %}
 <div class="col-lg-8 mt-5 mt-lg-0">
@@ -49,4 +48,9 @@ window.onclick = function(event) {
         VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
     </script>
 </div>
+
+<button id="vk-logout"
+        type="submit"
+        onclick="location.href='{{url_for(\'logout\')}}'">Log out from VK</button>
+
 {% endblock %}
