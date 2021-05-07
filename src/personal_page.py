@@ -15,9 +15,11 @@ app.config['SECRET_KEY'] = '3dcbeaea0404d5af70affaf4fb13d917e7fcfc71'
 
 @app.route("/")
 def index_page():
-    if not session.get('user_id') is None:
-        return render_template("index_logout.html")
-    return render_template("index_login.html")
+    user_id = session.get('user_id')
+    if user_id is None:
+        return render_template("index_login.html")
+    user = Users.query.filter_by(id=user_id).first()
+    return render_template("index_logout.html", name=user.name)
 
 
 @app.route("/portfolio-details-battleship.html")
@@ -38,6 +40,11 @@ def details_dvfs():
 @app.route("/portfolio-details-java.html")
 def details_java():
     return render_template('portfolio-details-java.html')
+
+
+@app.route("/logout_sure")
+def logout_sure():
+    return render_template('index_sure.html')
 
 
 class Users(db.Model):
